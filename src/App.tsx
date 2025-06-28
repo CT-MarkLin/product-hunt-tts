@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const d = getDate(date).replace(/-/g, '');
-    fetch(`https://product-hunt.deno.dev?d=${d}`).then(async (res) => {
+    fetch(`https://supabase.hzc.pub/functions/v1/product-hunt?d=${d}`).then(async (res) => {
       if (!res) {
         return;
       }
